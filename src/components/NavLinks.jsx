@@ -6,7 +6,7 @@ export default function NavLinks() {
   return (
     <Navigation
       links={[
-        <Link key={1} className="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2" to="/About">
+        <Link key={1} className="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2" to="/about">
           About
         </Link>,
         <Link key={2} className="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2" to="/portfolio">
