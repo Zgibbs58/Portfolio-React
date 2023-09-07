@@ -1,11 +1,11 @@
-
+import Header from './components/Header'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-4xl font-bold text-blue-500'>Hello, my name is Zach.</h1>
+      <Header />
     </>
   )
 }
