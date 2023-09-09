@@ -8,7 +8,6 @@ import Resume from "./pages/Resume";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("/");
-  console.log(currentPage);
   return (
     <>
       <Header setCurrentPage={setCurrentPage} />

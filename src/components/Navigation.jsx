@@ -1,6 +1,5 @@
 export default function Navigation({ setCurrentPage }) {
   const handleLink = (e, page) => {
-    console.log(page);
     e.preventDefault();
     setCurrentPage(page);
   };
