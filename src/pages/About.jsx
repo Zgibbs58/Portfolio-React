@@ -1,6 +1,11 @@
 import backgroundImage from "../assets/zachHeadshot1.png";
 
-export default function About() {
+export default function About({ setCurrentPage }) {
+  const handleLink = (e, page) => {
+    console.log(page);
+    e.preventDefault();
+    setCurrentPage(page);
+  };
   return (
     <div className="flex justify-center w-full bg-slate-900" style={{ height: "700px" }}>
       <div className="flex">
@@ -15,14 +20,16 @@ export default function About() {
             </p>
             <div className="flex justify-center lg:justify-start mt-6">
               <a
+                href="#"
+                onClick={(e) => handleLink(e, "portfolio")}
                 className="px-4 py-3 bg-slate-900 text-slate-200 text-s font-semibold rounded hover:bg-slate-200 hover:text-slate-900 transition ease-in-out delay-100"
-                href="/portfolio"
               >
                 Portfolio
               </a>
               <a
-                className="mx-4 px-4 py-3 bg-slate-200 text-slate-900 text-s font-semibold rounded hover:bg-slate-900 hover:text-slate-200 transition ease-in-out delay-100"
                 href="/contact"
+                onClick={(e) => handleLink(e, "contact")}
+                className="mx-4 px-4 py-3 bg-slate-200 text-slate-900 text-s font-semibold rounded hover:bg-slate-900 hover:text-slate-200 transition ease-in-out delay-100"
               >
                 Contact
               </a>
