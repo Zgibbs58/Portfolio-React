@@ -15,34 +15,34 @@ export default function Portfolio() {
       gitLink: "https://github.com/Zgibbs58/Tech-Blog",
     },
     {
-      imgUrl: "https://placehold.co/400x200",
-      title: "Project3",
+      imgUrl: "/assets/images/maintenanceManitee.png",
+      title: "Maintenance Manatee",
       deployedLink: "https://maintenance-manatee-20230807-e071f072b462.herokuapp.com/",
-      gitLink: "#",
+      gitLink: "https://github.com/cdgonzo23/maintenance-manatee",
     },
     {
-      imgUrl: "https://placehold.co/400x200",
-      title: "Project4",
-      deployedLink: "#",
-      gitLink: "#",
+      imgUrl: "/assets/images/cocktailWizard1.png",
+      title: "Cocktail Wizard",
+      deployedLink: "https://zgibbs58.github.io/drink-recipe-finder/",
+      gitLink: "https://github.com/Zgibbs58/drink-recipe-finder",
     },
     {
-      imgUrl: "https://placehold.co/400x200",
-      title: "Project5",
-      deployedLink: "#",
-      gitLink: "#",
+      imgUrl: "/assets/images/noteTaker.png",
+      title: "Note Taker",
+      deployedLink: "https://morning-escarpment-54006-aa56880bea27.herokuapp.com/notes",
+      gitLink: "https://github.com/Zgibbs58/Note-Taker",
     },
     {
-      imgUrl: "https://placehold.co/400x200",
-      title: "Project5",
-      deployedLink: "#",
-      gitLink: "#",
+      imgUrl: "/assets/images/textEditor.png",
+      title: "Text Editor",
+      deployedLink: "https://tranquil-stream-56712-b9712153b3bf.herokuapp.com/",
+      gitLink: "https://github.com/Zgibbs58/Text-Editor-Progressive-Web-App-PWA",
     },
   ];
   return (
     <>
-      <h1 className="pt-8 text-5xl font-bold text-slate-900 my-8">Portfolio</h1>
-      <div className=" flex flex-wrap justify-center gap-5 mx-5 my-20">
+      <h1 className="pt-8 text-5xl font-bold text-slate-900 pt-10 bg-slate-100">Portfolio</h1>
+      <div className=" flex flex-wrap justify-center gap-5 px-5 py-10 bg-slate-100">
         {projects.map((project) => (
           <Project key={project.title} image={project.imgUrl} title={project.title} deployedLink={project.deployedLink} gitLink={project.gitLink} />
         ))}

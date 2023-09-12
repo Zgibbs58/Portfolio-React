@@ -10,7 +10,8 @@ export default function Contact() {
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e, inputName) => {
+    console.log(e);
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
@@ -25,12 +26,17 @@ export default function Contact() {
     } else {
       setMessage(inputValue);
     }
-    // Checking on every change to the email input and displaying an error message if not valid
-    if (!validateEmail(email)) {
-      console.log("trigger");
-      document.getElementById(`emailError`).textContent = "Please enter a valid email.";
+    // Checking on every change to the inputs and displaying an error message if empty or not valid
+
+    if (!document.getElementById(`${inputName}`).value) {
+      document.getElementById(`${inputName}Error`).textContent = "This is a required field.";
     } else {
+      document.getElementById(`${inputName}Error`).textContent = "";
+    }
+    if (!email) {
       document.getElementById(`emailError`).textContent = "";
+    } else if (!validateEmail(email)) {
+      document.getElementById(`emailError`).textContent = "Please enter a valid email.";
     }
   };
 
@@ -38,11 +44,18 @@ export default function Contact() {
   const handleBlur = (inputName) => {
     if (!document.getElementById(`${inputName}`).value) {
       document.getElementById(`${inputName}Error`).textContent = "This is a required field.";
-    } else if (!validateEmail(email)) {
-      console.log("trigger");
-      document.getElementById(`emailError`).textContent = "Please enter a valid email.";
     } else {
       document.getElementById(`${inputName}Error`).textContent = "";
+    }
+  };
+  // Checking to confirm email entry and validate email
+  const handleEmailBlur = () => {
+    if (!email) {
+      document.getElementById(`emailError`).textContent = "This is a required field.";
+    } else if (!validateEmail(email)) {
+      document.getElementById(`emailError`).textContent = "Please enter a valid email.";
+    } else {
+      document.getElementById(`emailError`).textContent = "";
     }
   };
 
@@ -82,7 +95,7 @@ export default function Contact() {
                 placeholder="Jane"
                 name="firstName"
                 value={firstName}
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange(e, "firstName")}
                 onBlur={() => handleBlur("firstName")}
               />
               <p id="firstNameError" className="text-red-500 text-xs italic"></p>
@@ -98,7 +111,7 @@ export default function Contact() {
                 placeholder="Doe"
                 name="lastName"
                 value={lastName}
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange(e, "lastName")}
                 onBlur={() => handleBlur("lastName")}
               />
               <p id="lastNameError" className="text-red-500 text-xs italic"></p>
@@ -116,8 +129,8 @@ export default function Contact() {
                 type="email"
                 value={email}
                 name="email"
-                onChange={handleInputChange}
-                onBlur={() => handleBlur("email")}
+                onChange={(e) => handleInputChange(e, "email")}
+                onBlur={handleEmailBlur}
               />
               <p id="emailError" className="text-red-500 text-xs italic"></p>
             </div>
@@ -132,7 +145,7 @@ export default function Contact() {
                 id="message"
                 name="message"
                 value={message}
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange(e, "message")}
                 onBlur={() => handleBlur("message")}
               ></textarea>
               <p id="messageError" className="text-red-500 text-xs italic"></p>
