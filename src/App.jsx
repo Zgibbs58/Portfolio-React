@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
+import Footer from "./components/Footer";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("/");
@@ -15,6 +16,7 @@ function App() {
       {currentPage === "portfolio" && <Portfolio />}
       {currentPage === "contact" && <Contact />}
       {currentPage === "resume" && <Resume />}
+      <Footer />
     </>
   );
 }

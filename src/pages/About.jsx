@@ -1,5 +1,3 @@
-import backgroundImage from "../assets/zachHeadshot1.png";
-
 export default function About({ setCurrentPage }) {
   const handleLink = (e, page) => {
     console.log(page);
@@ -40,7 +38,7 @@ export default function About({ setCurrentPage }) {
           <div
             className="h-full object-cover"
             style={{
-              backgroundImage: `url(${backgroundImage})`,
+              backgroundImage: `url(/assets/images/zachHeadshot1.png)`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
