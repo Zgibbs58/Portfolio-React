@@ -12,17 +12,29 @@ export default function Footer() {
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-slate-800 sm:mt-0">
           <li>
             <a href="https://github.com/Zgibbs58" className="inline-block">
-              <img className="m-2" src="assets/icons/githubLogo.png" alt="github link" />
+              <img
+                className="m-2 transition duration-200 ease-in-out hover:shadow-xl dark:hover:shadow-black/30 rounded-2xl"
+                src="assets/icons/githubLogo.png"
+                alt="github link"
+              />
             </a>
           </li>
           <li>
             <a href="https://stackoverflow.com/users/22545697/zach-gibbs" className="inline-block">
-              <img className="m-2" src="assets/icons/stackOverflow.png" alt="stack overflow Link" />
+              <img
+                className="m-2 transition duration-200 ease-in-out hover:shadow-xl dark:hover:shadow-black/30 rounded-lg"
+                src="assets/icons/stackOverflow.png"
+                alt="stack overflow Link"
+              />
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/zach-gibbs-39a314107" className="inline-block">
-              <img className="m-2" src="assets/icons/linkedIn.png" alt="linkedIn link" />
+              <img
+                className="m-2 transition duration-200 ease-in-out hover:shadow-xl dark:hover:shadow-black/30 rounded"
+                src="assets/icons/linkedIn.png"
+                alt="linkedIn link"
+              />
             </a>
           </li>
         </ul>

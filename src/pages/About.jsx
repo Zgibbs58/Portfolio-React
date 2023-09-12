@@ -15,9 +15,12 @@ export default function About({ setCurrentPage }) {
             <h2 className="text-3xl font-semibold text-white md:text-4xl">
               Hello, I&#39;m <span className="text-blue-600">Zach</span>.
             </h2>
-            <p className="mt-2 text-sm text-gray-500 md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio
-              quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!
+            <p className="mt-2 text-sm text-slate-300 md:text-base">
+              As an experienced Inventory Control Specialist of 8 years at LifeWay, I have honed my skills in problem-solving, process improvement,
+              and team leadership. Alongside my current enrollment in Vanderbilt University&#39;s Coding Bootcamp, I have completed multiple courses
+              and certifications, including Udemy&#39;s Responsive HTML Email Mastery and LinkedIn Learning&#39;s JavaScript Essential Training. My
+              proficiency in web markup, client-side scripting, and modern JavaScript concepts, methodologies, best practices, and coding conventions
+              demonstrate my expertise in web development.
             </p>
             <div className="flex justify-center lg:justify-start mt-6">
               <a

@@ -41,8 +41,8 @@ export default function Portfolio() {
   ];
   return (
     <>
-      <h1 className="pt-8 text-5xl font-bold text-slate-900 pt-10 bg-slate-100">Portfolio</h1>
-      <div className=" flex flex-wrap justify-center gap-5 px-5 py-10 bg-slate-100">
+      <h1 className="pt-8 text-5xl font-bold text-slate-900 pt-10">Portfolio</h1>
+      <div className=" flex flex-wrap justify-center gap-5 px-5 py-10">
         {projects.map((project) => (
           <Project key={project.title} image={project.imgUrl} title={project.title} deployedLink={project.deployedLink} gitLink={project.gitLink} />
         ))}

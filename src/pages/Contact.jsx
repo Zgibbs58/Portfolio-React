@@ -82,14 +82,14 @@ export default function Contact() {
       <h1 className="pt-8 text-5xl font-bold text-slate-900">Contact</h1>
       <div className="flex justify-center pt-8">
         <form className="w-full max-w-lg" onSubmit={handleFormSubmit}>
-          <p className="text-red-500 text-s italic mb-6">{errorMessage}</p>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
+          <p className="text-red-500 text-s italic pb-6">{errorMessage}</p>
+          <div className="flex flex-wrap mx-3 pb-6">
+            <div className="w-full md:w-1/2 px-3 pb-6 md:pb-0">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-first-name">
                 First Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="firstName"
                 type="text"
                 placeholder="Jane"
@@ -101,11 +101,11 @@ export default function Contact() {
               <p id="firstNameError" className="text-red-500 text-xs italic"></p>
             </div>
             <div className="w-full md:w-1/2 px-3">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-last-name">
                 Last Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="lastName"
                 type="text"
                 placeholder="Doe"
@@ -117,13 +117,13 @@ export default function Contact() {
               <p id="lastNameError" className="text-red-500 text-xs italic"></p>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap mx-3 pb-6">
             <div className="w-full px-3">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
                 E-mail
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="email"
                 placeholder="user@gmail.com"
                 type="email"
@@ -135,13 +135,13 @@ export default function Contact() {
               <p id="emailError" className="text-red-500 text-xs italic"></p>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap mx-3 pb-6">
             <div className="w-full px-3">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold pb-2" htmlFor="grid-password">
                 Message
               </label>
               <textarea
-                className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 pb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                 id="message"
                 name="message"
                 value={message}
@@ -152,7 +152,7 @@ export default function Contact() {
             </div>
           </div>
           <button
-            className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            className="px-4 py-3 bg-slate-900 text-slate-200 text-s font-semibold rounded hover:bg-slate-200 hover:text-slate-900 transition ease-in-out delay-100"
             type="submit"
           >
             Send
