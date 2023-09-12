@@ -1,8 +1,9 @@
-export default function Navigation({ setCurrentPage }) {
-  const handleLink = (e, page) => {
-    e.preventDefault();
+export default function Navigation({ setCurrentPage, currentPage }) {
+  const handleLink = (page) => {
+    // e.preventDefault();
     setCurrentPage(page);
   };
+  console.log(currentPage);
   return (
     <nav className="bg-slate-200">
       <div className="md:flex items-center justify-between py-2 px-8 md:px-12">
@@ -15,30 +16,38 @@ export default function Navigation({ setCurrentPage }) {
         </div>
         <div className="flex flex-col md:flex-row hidden md:block -mx-2">
           <a
-            href="/"
-            onClick={(e) => handleLink(e, "/")}
-            className="text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2"
+            href="#"
+            onClick={() => handleLink("/")}
+            className={`text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2 ${
+              currentPage === "/" ? "bg-slate-900 text-slate-100" : ""
+            }`}
           >
             About
           </a>
           <a
-            href="#"
-            onClick={(e) => handleLink(e, "portfolio")}
-            className="text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2"
+            href="#portfolio"
+            onClick={() => handleLink("portfolio")}
+            className={`text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2 ${
+              currentPage === "portfolio" ? "bg-slate-900 text-slate-100" : ""
+            }`}
           >
             Portfolio
           </a>
           <a
-            href="#"
-            onClick={(e) => handleLink(e, "contact")}
-            className="text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2"
+            href="#contact"
+            onClick={() => handleLink("contact")}
+            className={`text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2 ${
+              currentPage === "contact" ? "bg-slate-900 text-slate-100" : ""
+            }`}
           >
             Contact
           </a>
           <a
-            href="#"
-            onClick={(e) => handleLink(e, "resume")}
-            className="text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2"
+            href="#resume"
+            onClick={() => handleLink("resume")}
+            className={`text-slate-800 rounded hover:bg-slate-900 hover:text-slate-100 transition ease-in-out delay-100 py-2 px-2 md:mx-2 ${
+              currentPage === "resume" ? "bg-slate-900 text-slate-100" : ""
+            }`}
           >
             Resume
           </a>

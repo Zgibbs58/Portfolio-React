@@ -10,8 +10,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState("/");
   return (
     <>
-      <Header setCurrentPage={setCurrentPage} />
-      {currentPage === "/" && <About setCurrentPage={setCurrentPage} />}
+      <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      {currentPage === "/" && <About setCurrentPage={setCurrentPage} currentPage={currentPage} />}
       {currentPage === "portfolio" && <Portfolio />}
       {currentPage === "contact" && <Contact />}
       {currentPage === "resume" && <Resume />}
