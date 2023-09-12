@@ -5,9 +5,12 @@ export default function About({ setCurrentPage }) {
     setCurrentPage(page);
   };
   return (
-    <div className="flex justify-center w-full bg-slate-900" style={{ height: "700px" }}>
+    <div className="flex justify-center w-full bg-slate-900 md:min-h-screen h-screen">
       <div className="flex">
-        <div className="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+        <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+          <div className="lg:hidden pb-10">
+            <img className="w-64" src="/assets/images/zachHeadshot1.png" alt="" />
+          </div>
           <div>
             <h2 className="text-3xl font-semibold text-white md:text-4xl">
               Hello, I&#39;m <span className="text-blue-600">Zach</span>.
