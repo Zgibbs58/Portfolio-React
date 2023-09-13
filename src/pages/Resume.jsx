@@ -1,7 +1,7 @@
 export default function Resume() {
   return (
     <>
-      <h1 className="pt-8 text-5xl font-bold text-slate-900 pt-10">Resume & Skills</h1>
+      <h1 className="py-10 px-5 text-5xl font-bold text-slate-900">Resume & Skills</h1>
       <div className="flex justify-center">
         <a
           href="/assets/devResume.pdf"
@@ -10,7 +10,7 @@ export default function Resume() {
           Download Resume
         </a>
       </div>
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto py-10">
         <div className="bg-slate-100 rounded-lg border border-slate-200 w-80 text-slate-900 text-lg font-medium">
           <a
             href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"

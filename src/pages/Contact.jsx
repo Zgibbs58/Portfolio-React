@@ -152,7 +152,7 @@ export default function Contact() {
             </div>
           </div>
           <button
-            className="px-4 py-3 bg-slate-900 text-slate-200 text-s font-semibold rounded hover:bg-slate-200 hover:text-slate-900 transition ease-in-out delay-100"
+            className="px-4 py-3 mb-10 bg-slate-900 text-slate-200 text-s font-semibold rounded hover:bg-slate-200 hover:text-slate-900 transition ease-in-out delay-100"
             type="submit"
           >
             Send

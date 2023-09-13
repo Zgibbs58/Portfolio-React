@@ -2,10 +2,10 @@
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Deployed Link](#)
+[Deployed Link](https://6500f966d4580509211c87f4--portfolio-react-09122023.netlify.app/)
 
 ## Description
-This single-page application showcases my projects and skills using the latest web technologies.
+A single-page React application showcasing my projects and skills. It also includes an about me section, downloadable resume, and a contact form that uses state to tell the user what is required.
 
 
 ## Table of Contents
