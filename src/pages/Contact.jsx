@@ -68,7 +68,7 @@ export default function Contact() {
       setErrorMessage("Please complete all required sections of the form.");
       return;
     }
-    alert(`Hello ${firstName}`);
+    alert(`Thanks for your submission, ${firstName}`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setFirstName("");
